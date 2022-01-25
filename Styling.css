@@ -57,6 +57,8 @@ body {
 
 .column img {
     filter: brightness(60%);
+    height: fit-content;
+    width: 75%;
 }
 
 .row:after {
