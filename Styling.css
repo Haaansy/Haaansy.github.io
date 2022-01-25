@@ -5,6 +5,18 @@
     color: white;
 }
 
+@media screen {
+    body {
+      width: 75%;
+    }
+}
+  
+@media print {
+    body {
+      width: 100%;
+    }
+}
+
 body {
     background-color: black;
 }
