@@ -1,35 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <!--<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
 
 <head>
-    <title>PORTFOLIO</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hansy's Portfolio</title>
+
+    <!--meta tags-->
     <meta charset="utf-8">
-    <meta http-equiv="expires" content="-1">
-    <meta http-equiv="pragma" content="no-cache" />
-    <link rel="stylesheet" href="Styling.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="navbar">
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">PROJECTS</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
+    <style>
+        :root {
+            --black: #000;
+            --maroon: #3D0000;
+            --darkred: #950101;
+            --lightred: #FF0000;
+            --darkdarkgray: #444444;
+        }
+
+        body {
+            background-color: var(--black);
+        }
+
+        #logo {
+            filter: invert(1);
+        }
+
+        #navlinkstyle a {
+            color: white;
+        }
+
+        #tabstyle {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            position: relative;
+            -webkit-transition-property: color;
+            transition-property: color;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+
+        #tabstyle:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--lightred);
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        #tabstyle:hover, #tabstyle:focus, #tabstyle:active {
+            color: white;
+        }
+
+        #tabstyle:hover:before, #tabstyle:focus:before, #tabstyle:active:before {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+
+        #content_titles {
+            color: white;
+        }
+
+        #image_me {
+            filter: grayscale();
+            border-radius: 50px;
+        }
+
+        #learn_btn:hover,
+        #learn_btn:active,
+        #learn_btn:visited,
+        #learn_btn:focus{
+            background-color: var(--lightred) !important;
+            border-color: var(--lightred) !important;
+            color: white !important;
+        }
+
+        #learn_btn {
+            color: var(--lightred);
+            border-color: var(--lightred);
+        }
+
+    </style>
+    
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-s-12">
+                <a class="navbar-brand">
+                    <img src="Images/instagram_ico.png" alt="" width="30" id="logo" height="30" class="d-inline-block align-text-top">
+                </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-s-12">
+                <ul class="nav justify-content-end" id="navlinkstyle">
+                    <li class="nav-item" id="tabstyle">
+                      <a class="nav-link active" aria-current="page" href="#" id="linkstyle">HOME</a>
+                    </li>
+                    <li class="nav-item" id="tabstyle">
+                      <a class="nav-link" href="#" id="linkstyle" id="linkstyle">ABOUT</a>
+                    </li>
+                    <li class="nav-item" id="tabstyle">
+                      <a class="nav-link" href="#" id="linkstyle">PROJECTS</a>
+                    </li>
+                    <li class="nav-item" id="tabstyle">
+                      <a class="nav-link disabled" id="linkstyle">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <div class="mt-5 container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <img id="image_me" src="Images/tryprofile.png" alt="me" height="50%" width="100%">
+                </div>
+            </div>
+            <div class="col">
+                <div class="justify-content-center" id="content_titles" style="margin-top: 50%;">
+                    <h1>Hello, I'm <span style="color: var(--lightred);">HANS</span> IAN</h1>
+                    <p>from Philippines.</p>
+                    <button type="button" class="btn btn-outline-primary" id="learn_btn">About Me</button>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div class="row">
-        <div class="column">
-            <h1>PROGRAMMER</h1>
-        </div>
-        <div class="column">
-            <img class="profile" src="Images/IzMe.png" alt="me">
-        </div>
-        <div class="column">
-            <h1>SKILLS</h1>
-        </div>
-    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>
