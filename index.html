@@ -147,13 +147,15 @@
                       <a class="nav-link" href="#portfolio" id="linkstyle">PORTFOLIO</a>
                     </li>
                     <li class="nav-item" id="tabstyle">
-                      <a class="nav-link disabled" id="linkstyle">CONTACT</a>
+                      <a class="nav-link" href="#contact" id="linkstyle">CONTACT</a>
                     </li>
                 </ul>
             </div>
           </div>
         </div>
     </nav>
+    
+    <!--HOME-->
     <div class="p-2 mt-5 container-fluid" id="home">
         <div class="row">
             <div class="col">
@@ -164,7 +166,7 @@
             <div class="col">
                 <div class="justify-content-center" id="content_titles" style="margin-top: 50%;">
                     <p class="fw-bold" style="font-size: 13px; color: var(--lightred);">WELCOME!</p>
-                    <p class="fw-bold" style="font-size: 13px; color: var(--lightred);">_______________________________</p>
+                    <div class="line"></div>
                     <p class="fs-1 fw-bold">I AM A PROGRAMMER</p>
                     <p class="font-monospace">I write code to help software applications operate more efficiently</p>
                     
@@ -173,12 +175,10 @@
             </div>
         </div>
     </div>
+
     <div class="padding" style="padding: 40px;" id="aboutpage"></div>
     <div class="container text-white" style="margin-top: 200px;" >
         <div class="row">
-            <div class="col-4">
-                <img class="rounded float-start img-fluid" src="Images/IzMe.png">
-            </div>
             <div class="col-8">
                 <p class="fs-1 fw-bold text-left">Hello, I Am Hans Bondoc</p>
                 <p class="text-left text-break" style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -187,6 +187,8 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
+            </div>
+            <div class="col-4">
             </div>
         </div>
     </div>
@@ -213,10 +215,57 @@
             <p class="text-white">Python Bot</p>
             <img src="Images/programming_icon.png" class="img-responsive" style="width:100%" alt="Image">
             <a type="button" class="btn btn-outline-primary" id="learn_btn" href="#">Download</a>
-            <a type="button" class="btn btn-outline-primary" id="learn_btn" href="#">Github</a>
           </div>
       -->
 
+      <div class="mt-5 p-5 container-fluid justify-content-center" id="contact">
+          <p class="fs-1 text-center" style="color: var(--lightred);">CONTACT DETAILS</p>
+          <p class="font-monospace text-center text-white">don't hesitate to contact me. Reach me via these provided details.</p>
+          <div class="row">
+            <div class="col text-center">
+                <p class="fs-1 text-center text-white">SOCIALS</p>
+                <a type="button" class="btn btn-outline-primary" id="learn_btn" href="https://www.facebook.com/Haansilog">
+                    <img src="Images/facebook_ico.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
+                    <span class="p-2"> Hansilog </span>
+                </a>
+                <a type="button" class="btn btn-outline-primary" id="learn_btn" href="https://www.facebook.com/Haansilog">
+                    <img src="Images/instagram_ico.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
+                    <span class="p-2"> hns_bndc_ </span>
+                </a>
+                <a type="button" class="btn btn-outline-primary" id="learn_btn" href="https://www.facebook.com/Haansilog">
+                    <img src="Images/youtube_ico.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
+                    <span class="p-2"> Haaansy </span>
+                </a>
+                <!-- ADDING A SOCIALS 
+                <a type="button" class="btn btn-outline-primary" id="learn_btn" href="https://www.facebook.com/Haansilog">
+                    <img src="Images/youtube_ico.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
+                    <span class="p-2"> Hansilog </span>
+                </a>
+                -->
+            </div>
+            <div class="col text-center">
+                <p class="fs-1 text-center text-white">CONTACT <span style="font-size: 10px;"> (click to copy text) </span></p>
+                <p type="button" onclick="copyText('hansianbondoc@gmail.com')" class="btn btn-outline-primary" id="learn_btn">
+                    <img src="Images/h.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
+                    <span class="p-2" id="textholder">hansianbondoc@gmail.com</span>
+                </p>
+                <p type="button" onclick="copyText('+63 9052392970')" class="btn btn-outline-primary" id="learn_btn">
+                    <img src="Images/h.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
+                    <span class="p-2" id="textholder">+63 9052392970</span>
+                </p>
+                <!-- ADDING CONTACT INFO
+                <p type="button" onclick="copyText('text here')" class="btn btn-outline-primary" id="learn_btn">
+                    <img src="Images/h.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
+                    <span class="p-2" id="textholder">+63 9052392970</span>
+                </p>    
+                -->
+            </div>
+          </div>
+      </div>
+
+      <p class="text-white text-left" style="font-size: 10px;">Made by Haaansy 2022®</p>
+
+    <script src="scripts/hansy.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 

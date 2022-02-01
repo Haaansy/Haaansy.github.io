@@ -1,8 +1,8 @@
-// if hover -> display txt
-function displayTxt(evt) {
-    evt.currentTarget.parentNode.querySelector( '.innerText' ).classList.remove( 'hide' );
-}
-// if leave -> hide txt
-function removeTxt(evt) {
-    evt.currentTarget.querySelector( '.innerText' ).classList.add( 'hide' );
+function copyText(evt) {
+     /* Get the text field */
+  var Text = evt
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(Text);
+
 }
