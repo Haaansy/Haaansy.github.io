@@ -28,15 +28,15 @@
 <body>
     <style>
         :root {
-            --black: #000;
-            --maroon: #3D0000;
-            --darkred: #950101;
-            --lightred: #FF0000;
-            --darkdarkgray: #444444;
+            --gray_light: #525252;
+            --gray_mid: #414141;
+            --gray_dark: #313131;
+            --text: #CA3E47;
         }
 
         body {
-            background-color: black;
+            background: rgb(49,49,49);
+            background: linear-gradient(351deg, rgba(49,49,49,1) 31%, rgba(82,82,82,1) 57%, rgba(65,65,65,1) 87%);
             font-family: 'Outfit', sans-serif;
             overflow-x: hidden;
         }
@@ -74,7 +74,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: darkred;
+            background: var(--text);
             -webkit-transform: scaleY(0);
             transform: scaleY(0);
             -webkit-transform-origin: 50% 100%;
@@ -98,10 +98,6 @@
 
         #content_titles {
             color: white;
-        }
-
-        #image_me {
-            filter: grayscale();
         }
 
         #linkstyle {
@@ -141,30 +137,6 @@
         * animation roll-in-left
         * ----------------------------------------
         */
-        @-webkit-keyframes roll-in-left {
-        0% {
-            -webkit-transform: translateX(-800px) rotate(-540deg);
-                    transform: translateX(-800px) rotate(-540deg);
-            opacity: 0;
-        }
-        100% {
-            -webkit-transform: translateX(0) rotate(0deg);
-                    transform: translateX(0) rotate(0deg);
-            opacity: 1;
-        }
-        }
-        @keyframes roll-in-left {
-        0% {
-            -webkit-transform: translateX(-800px) rotate(-540deg);
-                    transform: translateX(-800px) rotate(-540deg);
-            opacity: 0;
-        }
-        100% {
-            -webkit-transform: translateX(0) rotate(0deg);
-                    transform: translateX(0) rotate(0deg);
-            opacity: 1;
-        }
-        }
 
         @-webkit-keyframes slide-in-left {
             0% {
@@ -190,14 +162,266 @@
                 opacity: 1;
             }
         }
+
+        @-webkit-keyframes text-flicker-in-glow {
+            0% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            10.1% {
+                opacity: 1;
+                text-shadow: none;
+            }
+            10.2% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            20% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            20.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+            }
+            20.6% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            30% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            30.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+            30.5% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+            30.6% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            45% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            45.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+            50% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+            55% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+            55.1% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            57% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            57.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+            }
+            60% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+            }
+            60.1% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            65% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            65.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+            75% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+            75.1% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            77% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            77.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+            85% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+            85.1% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            86% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            86.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+            }
+            @keyframes text-flicker-in-glow {
+            0% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            10.1% {
+                opacity: 1;
+                text-shadow: none;
+            }
+            10.2% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            20% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            20.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+            }
+            20.6% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            30% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            30.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+            30.5% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+            30.6% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            45% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            45.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+            50% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+            55% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+            55.1% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            57% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            57.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+            }
+            60% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+            }
+            60.1% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            65% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            65.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+            75% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+            75.1% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            77% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            77.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+            85% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+            85.1% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            86% {
+                opacity: 0;
+                text-shadow: none;
+            }
+            86.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+            }
+
     </style>
 
     <!-- contents -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="navbar">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="navbar" style="background-color: var(--gray_dark);">
+        <div class="container">
           <div class="row">
             <a class="navbar-brand">
-                <img src="Images/h.png" alt="" width="30" id="logo" height="30" class="d-inline-block align-text-top">
+                <i class="fas fa-star"></i>
             </a>
           </div>
           <div class="row">
@@ -224,32 +448,51 @@
     </nav>
     
     <!--HOME-->
-    <div class="p-2 mt-5 container-fluid" id="home">
+    <div class="mt-1 p-3 container" id="home"> </div>
+    <div class="p-5 container-fluid" style="background-color: var(--gray_dark); ">
         <div class="row">
             <div class="col">
                 <div class="d-flex justify-content-center">
                     <div class="animation-wrapper">
                         <div class="animate">
-                            <img class="rounded float-start img-fluid" id="image_me" src="Images/tryprofile.png" style="margin-top: 25%;">
+                            <img class="float-start img-fluid" id="image_me" src="Images/tryprofile.png">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="justify-content-center" id="content_titles" style="margin-top: 50%;">
-                    <p class="fw-bold text-danger">WELCOME!</p>
-                    <hr class="text-danger" style="height: 3px; border: none; width: 30%;">
-                    <p class="fs-1 fw-bold">I AM A PROGRAMMER</p>
+                <div class="mt-5 p-5 justify-content-center" id="content_titles">
+                    <p class="fw-light fs-6" style="color: var(--text);">WELCOME!</p>
+                    <hr style="height: 5px; border: none; width: 60%; color: var(--text)">
+                    <p class="fs-2 fw-bold">I AM A PROGRAMMER<span style="animation: text-flicker-in-glow; animation-duration: 4s; animation-iteration-count: infinite;">_</span></p>
                     <p class="font-monospace">🇵🇭 Philippines 👨‍🎓 BSIT Student</p>
                     <a type="button" class="btn btn-outline-danger" href="https://github.com/Haaansy" id="button_style">github.com/Haaansy</a>
                 </div>
             </div>
         </div>
     </div>
+    <div class="rounded-3 p-3 container text-danger bg-dark justify-content-center text-center" style="background-color:var(--gray-dark); border: 2px solid var(--text);">
+        <div class="row">
+            <div class="col-4" style="border-right: 2px solid;">
+                <i class="fas fa-star"></i>
+                <span class="p-2 font-monospace">50+ PROJECTS</span>
+            </div>
+            <div class="col-4" style="border-right: 2px solid;">
+                <i class="fas fa-star"></i>
+                <span class="p-2 font-monospace">47+ FEEDBACK</span>
+            </div>
+            <div class="col-4">
+                <i class="fas fa-star"></i>
+                <span class="p-2 font-monospace text-break">2 Years Experience</span>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3 p-5 container"></div>
+   
 
-    <div class="padding" style="padding: 25px;" id="aboutpage"></div>
-
-    <div class="container text-white" style="margin-top: 200px;" >
+    <!--ABOUT ME-->
+    <div class="mt-5 p-5 container" id="aboutpage"></div>
+    <div class="p-5 mt-5 container text-white" style="background-color: var(--gray_mid); border: 2px solid var(--text);" >
         <div class="row">
             <div class="col-6" style="margin-top: 12%;">
                 <p class="fs-1 fw-bold text-left">Hello, I Am Hans Bondoc</p>
@@ -265,7 +508,7 @@
                 <div class="p-2 row justify-content-center">
                     <div class="animation-wrapper">
                         <div class="animate" style="animation-delay:0.1s;">
-                            <div class="mb-3 col-12 text-center">
+                            <div class="mb-3 p-2 col-12 text-center">
                                 <i class="fab fa-python fa-3x"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -273,7 +516,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <div class="mb-3 col-12 text-center">
+                            <div class="mb-3 p-2 col-12 text-center">
                                 <i class="fab fa-java fa-3x"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -281,7 +524,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <div class="mb-3 col-12 text-center">
+                            <div class="mb-3 p-2 col-12 text-center">
                                 <i class="fab fa-html5 fa-3x"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -289,7 +532,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <div class="mb-3 col-12 text-center">
+                            <div class="mb-3 p-2 col-12 text-center">
                                 <i class="fab fa-css3 fa-3x"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -297,7 +540,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <div class="mb-3 col-12 text-center">
+                            <div class="mb-3 p-2 col-12 text-center">
                                 <i class="fab fa-js-square fa-3x"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -305,7 +548,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <div class="mb-3 col-12 text-center">
+                            <div class="mb-3 p-2 col-12 text-center">
                                 <i class="fab fa-git-square fa-3x"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -319,26 +562,25 @@
             </div>
         </div>
     </div>
-        <div class="row">
-        </div>
-
+    
     <!--PORTFOLIO-->
-    <div class="container" style="margin-top: 20%;">
+    <div class="p-1 container" id="portfolio"></div>
+    <div class="p-3 container" style="margin-top: 20%; background-color: var(--gray_mid); border: 2px solid var(--text);">
         <div class="container text-center">
-          <p class="text-center text-danger fs-1">PORTFOLIO</p>      
+          <p class="text-center fs-1" style="color: var(--text);">WORKS</p>      
           <p class="font-monospace text-white">here are some of my works.</p>
         </div>
-      </div>
-        
-      <div class="mb-5 container-fluid bg-3 text-center" id="portfolio">    
-        <div class="row">
-          <div class="col-sm-2">
-            <p class="text-white" id="python">TEXT HERE</p>
-            <i class="fas fa-code fa-10x" style="margin-bottom: 10px; color: darkred; padding: 5px;"></i>
+    </div>
+    <div class="mb-5 p-3 container-fluid bg-3 text-center" style="background-color: var(--gray_mid);">    
+        <div class="mb-3 row justify-content-center">
+          <div class="p-2 col-3">
+            <p class="text-white" id="python">TEXT</p>
+            <i class="fas fa-code fa-10x" style="margin-bottom: 10px; color: var(--text); padding: 5px;"></i>
             <a type="button" class="btn btn-outline-warning disabled" href="https://github.com/Haaansy/ReactionTimeBot" id="button_style">SOON</a>
           </div>
         </div>
-      </div>
+    </div>
+
       <!-- ADDING A PROJECT
           <div class="col-sm-2">
             <p class="text-white" id="python">TEXT HERE</p>
@@ -346,32 +588,32 @@
             <a type="button" class="btn btn-outline-danger" href="https://github.com/Haaansy/ReactionTimeBot" id="button_style">DOWNLOAD</a>
           </div>
       -->
-
-      <div class="mt-5 p-5 container-fluid justify-content-center" id="contact">
-          <p class="fs-1 text-center text-danger">CONTACT DETAILS</p>
-          <p class="font-monospace text-center text-white">don't hesitate to contact me. Reach me through these provided details.</p>
-          <div class="row">
-            <div class="col text-center">
-                <p class="fs-1 text-center text-white">SOCIAL MEDIAS</p>
-                <a type="button" class="btn btn-outline-danger" href="https://www.facebook.com/Haansilog" id="button_style">
-                    <i class="fab fa-facebook-square"></i>
-                    <span class="p-2"> Hansilog </span>
-                </a>
-                <a type="button" class="btn btn-outline-danger" href="https://www.instagram.com/hns_bndc_/" id="button_style">
-                    <i class="fab fa-instagram"></i>
-                    <span class="p-2"> hns_bndc_ </span>
-                </a>
-                <a type="button" class="btn btn-outline-danger" href="https://twitter.com/Haaansilog" id="button_style">
-                    <i class="fab fa-twitter-square"></i>
-                    <span class="p-2"> Haaansy </span>
-                </a>
-                <!-- ADDING A SOCIALS 
-                <a type="button" class="btn btn-outline-primary" id="learn_btn" href="https://www.facebook.com/Haansilog">
-                    <img src="Images/youtube_ico.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
-                    <span class="p-2"> Hansilog </span>
-                </a>
-                -->
-            </div>
+    <div class="p-1 container" id="contact"></div>
+        <div class="p-2 container-fluid justify-content-center" style="background-color: --gray_dark;">
+            <p class="fs-1 text-center text-danger">GET IN TOUCH</p>
+            <p class="font-monospace text-center text-white">Reach me through these provided details.</p>
+            <div class="mt-5 row">
+                <div class="col text-center">
+                    <p class="fs-1 text-center text-white">SOCIAL MEDIAS</p>
+                    <a type="button" class="btn btn-outline-danger" href="https://www.facebook.com/Haansilog" id="button_style">
+                        <i class="fab fa-facebook-square"></i>
+                        <span class="p-2"> Hansilog </span>
+                    </a>
+                    <a type="button" class="btn btn-outline-danger" href="https://www.instagram.com/hns_bndc_/" id="button_style">
+                        <i class="fab fa-instagram"></i>
+                        <span class="p-2"> hns_bndc_ </span>
+                    </a>
+                    <a type="button" class="btn btn-outline-danger" href="https://twitter.com/Haaansilog" id="button_style">
+                        <i class="fab fa-twitter-square"></i>
+                        <span class="p-2"> Haaansy </span>
+                    </a>
+                    <!-- ADDING A SOCIALS 
+                    <a type="button" class="btn btn-outline-primary" id="learn_btn" href="https://www.facebook.com/Haansilog">
+                        <img src="Images/youtube_ico.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
+                        <span class="p-2"> Hansilog </span>
+                    </a>
+                    -->
+                </div>
             <div class="col text-center">
                 <p class="fs-1 text-center text-white">CONTACT <span style="font-size: 10px;"> (click to copy text) </span></p>
                 <p type="button" onclick="copyText('hansianbondoc@gmail.com')" class="btn btn-outline-danger" id="button_style">
