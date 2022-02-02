@@ -36,7 +36,7 @@
         }
 
         body {
-            background-color: var(--black);
+            background-color: black;
             font-family: 'Outfit', sans-serif;
             overflow-x: hidden;
         }
@@ -124,17 +124,7 @@
 
         .animate-object {
             animation: slide-in-left;
-            animation-duration: 2s;
-            opacity: 1;
-        }
-
-        .language {
-            opacity: 0;
-        }
-
-        .language-animate {
-            animation: roll-in-left;
-            animation-duration: 3s;
+            animation-duration: 1s;
             opacity: 1;
         }
         
@@ -248,7 +238,7 @@
             <div class="col">
                 <div class="justify-content-center" id="content_titles" style="margin-top: 50%;">
                     <p class="fw-bold text-danger">WELCOME!</p>
-                    <div class="line"></div>
+                    <hr class="text-danger" style="height: 3px; border: none; width: 30%;">
                     <p class="fs-1 fw-bold">I AM A PROGRAMMER</p>
                     <p class="font-monospace">🇵🇭 Philippines 👨‍🎓 BSIT Student</p>
                     <a type="button" class="btn btn-outline-danger" href="https://github.com/Haaansy" id="button_style">github.com/Haaansy</a>
@@ -257,11 +247,11 @@
         </div>
     </div>
 
-    <div class="padding" style="padding: 40px;" id="aboutpage"></div>
+    <div class="padding" style="padding: 25px;" id="aboutpage"></div>
 
     <div class="container text-white" style="margin-top: 200px;" >
         <div class="row">
-            <div class="col-6">
+            <div class="col-6" style="margin-top: 12%;">
                 <p class="fs-1 fw-bold text-left">Hello, I Am Hans Bondoc</p>
                 <p class="text-left text-break" style="font-size: 12px;">
                     currently living in Philippines. Studying Information Technology in The University of Cordilleras (BSIT).
@@ -271,7 +261,7 @@
                 </p>
             </div>
             <div class="col-6">
-                <p class="fs-1 text-white text-center"> LANGUAGES: </p>
+                <p class="fs-1 text-danger text-center"> LANGUAGES </p>
                 <div class="p-2 row justify-content-center">
                     <div class="animation-wrapper">
                         <div class="animate" style="animation-delay:0.1s;">
@@ -283,22 +273,14 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                        </div>
-                    </div>
-                    <div class="animation-wrapper">
-                        <div class="animate" style="animation-delay: 0.2s;">
                             <div class="mb-3 col-12 text-center">
                                 <i class="fab fa-java fa-3x"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                        </div>
-                    </div>
-                    <div class="animation-wrapper">
-                        <div class="animate" style="animation-delay: 0.3s;">
                             <div class="mb-3 col-12 text-center">
                                 <i class="fab fa-html5 fa-3x"></i>
                                 <i class="fas fa-star"></i>
@@ -307,29 +289,29 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                        </div>
-                    </div>
-                    <div class="animation-wrapper">
-                        <div class="animate" style="animation-delay: 0.4s;">
                             <div class="mb-3 col-12 text-center">
                                 <i class="fab fa-css3 fa-3x"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                        </div>
-                    </div>
-                    <div class="animation-wrapper">
-                        <div class="animate" style="animation-delay: 0.5s;">
                             <div class="mb-3 col-12 text-center">
                                 <i class="fab fa-js-square fa-3x"></i>
                                 <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="mb-3 col-12 text-center">
+                                <i class="fab fa-git-square fa-3x"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
                         </div>
                     </div>
@@ -350,18 +332,18 @@
         
       <div class="mb-5 container-fluid bg-3 text-center" id="portfolio">    
         <div class="row">
-          <div class="col-sm-3">
-            <p class="text-white" id="python">Reaction Time Bot for Human Benchmark</p>
-            <img src="Images/proof.png" class="p-5 img-responsive" style="width:100%" alt="Image">
-            <a type="button" class="btn btn-outline-danger" href="https://github.com/Haaansy/ReactionTimeBot" id="button_style">DOWNLOAD</a>
+          <div class="col-sm-2">
+            <p class="text-white" id="python">TEXT HERE</p>
+            <i class="fas fa-code fa-10x" style="margin-bottom: 10px; color: darkred; padding: 5px;"></i>
+            <a type="button" class="btn btn-outline-warning disabled" href="https://github.com/Haaansy/ReactionTimeBot" id="button_style">SOON</a>
           </div>
         </div>
       </div>
       <!-- ADDING A PROJECT
-          <div class="col-sm-3">
-            <p class="text-white">Python Bot</p>
-            <img src="Images/programming_icon.png" class="img-responsive" style="width:100%" alt="Image">
-            <a type="button" class="btn btn-outline-primary" id="learn_btn" href="#">Download</a>
+          <div class="col-sm-2">
+            <p class="text-white" id="python">TEXT HERE</p>
+            <i class="fas fa-code fa-10x" style="margin-bottom: 10px; color: darkred; padding: 5px;"></i>
+            <a type="button" class="btn btn-outline-danger" href="https://github.com/Haaansy/ReactionTimeBot" id="button_style">DOWNLOAD</a>
           </div>
       -->
 
@@ -370,17 +352,17 @@
           <p class="font-monospace text-center text-white">don't hesitate to contact me. Reach me through these provided details.</p>
           <div class="row">
             <div class="col text-center">
-                <p class="fs-1 text-center text-white">SOCIALS</p>
+                <p class="fs-1 text-center text-white">SOCIAL MEDIAS</p>
                 <a type="button" class="btn btn-outline-danger" href="https://www.facebook.com/Haansilog" id="button_style">
-                    <img src="Images/facebook_ico.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
+                    <i class="fab fa-facebook-square"></i>
                     <span class="p-2"> Hansilog </span>
                 </a>
-                <a type="button" class="btn btn-outline-danger" href="https://www.facebook.com/Haansilog" id="button_style">
-                    <img src="Images/instagram_ico.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
+                <a type="button" class="btn btn-outline-danger" href="https://www.instagram.com/hns_bndc_/" id="button_style">
+                    <i class="fab fa-instagram"></i>
                     <span class="p-2"> hns_bndc_ </span>
                 </a>
-                <a type="button" class="btn btn-outline-danger" href="https://www.facebook.com/Haansilog" id="button_style">
-                    <img src="Images/youtube_ico.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
+                <a type="button" class="btn btn-outline-danger" href="https://twitter.com/Haaansilog" id="button_style">
+                    <i class="fab fa-twitter-square"></i>
                     <span class="p-2"> Haaansy </span>
                 </a>
                 <!-- ADDING A SOCIALS 
@@ -393,12 +375,8 @@
             <div class="col text-center">
                 <p class="fs-1 text-center text-white">CONTACT <span style="font-size: 10px;"> (click to copy text) </span></p>
                 <p type="button" onclick="copyText('hansianbondoc@gmail.com')" class="btn btn-outline-danger" id="button_style">
-                    <img src="Images/h.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
+                    <i class="fas fa-envelope-square"></i>
                     <span class="p-2" id="textholder">hansianbondoc@gmail.com</span>
-                </p>
-                <p type="button" onclick="copyText('+63 9052392970')" class="btn btn-outline-danger" id="button_style">
-                    <img src="Images/h.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
-                    <span class="p-2" id="textholder">+63 9052392970</span>
                 </p>
                 <!-- ADDING CONTACT INFO
                 <p type="button" onclick="copyText('text here')" class="btn btn-outline-danger" id="button_style">
