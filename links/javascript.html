@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <style>
+            .results {
+                display: flex;
+                justify-content: center;
+            }
+
+            .results-avg {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .results-honors {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+        </style>
+        <div class="input-form">
+            <form action="">
+                <label for="grade_one">CIT14 Grade:</label><br>
+                <input type="text" name="grade_one" id="grade_one"><br>
+                <label for="grade_two">CIT5 Grade:</label><br>
+                <input type="text" name="grade_two" id="grade_two"><br>
+                <label for="grade_three">CC5 Grade:</label><br>
+                <input type="text" name="grade_three" id="grade_three"><br>
+                <label for="grade_four">SOC SCI 101N Grade:</label><br>
+                <input type="text" name="grade_four" id="grade_four"><br>
+                <label for="grade_five">CIT2 Grade:</label><br>
+                <input type="text" name="grade_five" id="grade_five"><br>
+                <input type="button" value="Compute" id="compute"><br>
+            </form>
+        </div>
+        <div class="results">
+            <div class="results-avg">
+                <h2 id="average"></h2>
+            </div>
+            <div class="results-honors">
+                <h2 id="honors"></h2>
+            </div>
+        </div>
+        <script>
+                document.getElementById("compute").addEventListener("click", () => {
+                    let grade_one = document.getElementById("grade_one").value
+                    let grade_two = document.getElementById("grade_two").value
+                    let grade_three = document.getElementById("grade_three").value
+                    let grade_four = document.getElementById("grade_four").value
+                    let grade_five = document.getElementById("grade_five").value
+
+                    let sum =  (parseInt(grade_one) + parseInt(grade_two) + parseInt(grade_three) + parseInt(grade_four) + parseInt(grade_five))/5
+                    console.log(sum)
+
+                    let av = "Average: "
+                    document.getElementById("average").innerHTML = av.concat(sum.toString())
+
+                    if(sum > 90) {
+                        document.getElementById("honors").innerHTML = "With Honors."
+                    } else if(sum > 75 && sum < 90) {
+                        document.getElementById("honors").innerHTML = "Passed."
+                    } else {
+                        document.getElementById("honors").innerHTML = "Failed."
+                    }
+                })
+        </script>
+    </body>
+</html>

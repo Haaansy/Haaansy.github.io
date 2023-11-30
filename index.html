@@ -5,7 +5,7 @@
 <head>
     <title>Hansy's Portfolio</title>
 
-    <!--meta tags-->
+    <!--Meta-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-    <!-- contents -->
+    <!--Contents-->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="navbar" style="background-color: var(--gray_dark);">
         <div class="container">
           <div class="row">
@@ -29,7 +29,7 @@
           </div>
           <div class="row">
             <div class="col">
-                <!-- Home About Projects Contact -->
+                <!--Navigation Bar-->
                 <ul class="nav bg-dark" id="navlinkstyle" id="fontnav">
                     <li class="nav-item" id="tabstyle">
                       <a class="nav-link text-white" aria-current="page" href="#home" id="linkstyle">HOME</a>
@@ -67,7 +67,7 @@
                     <p class="fw-light fs-6" style="color: var(--text);">WELCOME!</p>
                     <div class="bg-danger my-2" style="height: 5px; opacity: .5;"></div>
                     <h2 class="text-white">I am Hans!</h2>
-                    <p class="font-monospace text-white">🇵🇭 Philippines 👨‍🎓 BSIT Student</p>
+                    <p class="font-monospace text-white">👨‍🎓 BSIT Student</p>
                     <a type="button" class="btn btn-outline-danger" href="https://github.com/Haaansy" id="button_style">github.com/Haaansy</a>
                 </div>
             </div>
@@ -132,7 +132,7 @@
                 </p>
             </div>
             <div class="col-6">
-                <h1 class="text-danger text-center"> EXPERIENCES </h1>
+                <h1 class="text-danger text-center"> &lt; EXPERIENCES /&gt;</h1>
                 <div class="p-2 row justify-content-center">
                     <div class="w-100">
                         <p class="mb-0">HTML</p>
@@ -142,6 +142,12 @@
                     </div>
                     <div class="w-100 mt-1">
                         <p class="mb-0">CSS</p>
+                        <div class="progress w-100">
+                            <div class="progress-bar bg-danger progress-bar-animated progress-bar-striped" role="progressbar" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="w-100 mt-1">
+                        <p class="mb-0">Bootstrap</p>
                         <div class="progress w-100">
                             <div class="progress-bar bg-danger progress-bar-animated progress-bar-striped" role="progressbar" style="width: 75%"></div>
                         </div>
@@ -201,74 +207,103 @@
           <p class="font-monospace text-white">Here are some Projects I worked on.</p>
         </div>
     </div>
-    <div class="mb-5 p-3 container-fluid bg-3 text-center" style="background-color: var(--gray_mid);">    
-        <div class="mb-3 row justify-content-center">
-          <div class="col-sm-3">
-            <p class="text-white" id="python">LOREM IPSUM</p>
-            <img class="img-fluid" src="Images/tryprofile.png" style="opacity: 0;">
-            <a type="button" class="mt-3 btn btn-outline-warning disabled" href="#" id="button_style">SOON</a>
-          </div>
+    <div class="mb-5 p-5 container-fluid bg-3 text-center justify-content-center" style="background-color: var(--gray_mid);">    
+        <div class="row justify-content-center">
+            <div class="card bg-dark text-white mr-3 mt-3" style="width: 18rem;">
+                <img src="/Images/chatApp.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">L0V3S (BONUS!)</h5>
+                  <p class="card-text">A Chat Application created with NextJS Typescript, MongoDB, TailwindCSS</p>
+                  <a href="https://loves-chat.vercel.app/" class="btn btn-danger">Visit</a>
+                </div>
+            </div>
+            <div class="card bg-dark text-white mr-3 mt-3" style="width: 18rem;">
+                <img src="/Images/Improved.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">[M] LAB ACTIVITY: Mockups to HTML + Improved CSS</h5>
+                  <p class="card-text">Front-end HTML, CSS</p>
+                  <a href="links/Improved/index.html" class="btn btn-danger">Visit</a>
+                </div>
+            </div>
+            <div class="card bg-dark text-white mr-3 mt-3" style="width: 18rem;">
+                <img src="/Images/Bootstrap.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">BootStrap - JavaScript Activity 2</h5>
+                  <p class="card-text">Student Registration created with HTML, Bootstrap, JQuery</p>
+                  <a href="links/bootstrap.html" class="btn btn-danger">Visit</a>
+                </div>
+            </div>
+            <div class="card bg-dark text-white mr-3 mt-3" style="width: 18rem;">
+                <img src="/Images/jquery.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Bootstrap - jQuery Activity 3</h5>
+                  <p class="card-text">JQuery Table Manipulating created with HTML, Bootstrap, jQuery</p>
+                  <a href="links/jquery.html" class="btn btn-danger">Visit</a>
+                </div>
+            </div>
+            <div class="card bg-dark text-white mr-3 mt-3" style="width: 18rem;">
+                <img src="/Images/javascript.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">[M] LAB ACTIVITY: Introduction to JavaScript</h5>
+                  <p class="card-text">Vanilla JS Student Grading System created with HTML, CSS, VanillaJS</p>
+                  <a href="links/javascript.html" class="btn btn-danger">Visit</a>
+                </div>
+            </div>
         </div>
+        
     </div>
-
-      <!-- ADDING A PROJECT
-          <div class="col-sm-2">
-            <p class="text-white" id="python">TEXT HERE</p>
-            <i class="fas fa-code fa-10x" style="margin-bottom: 10px; color: darkred; padding: 5px;"></i>
-            <a type="button" class="btn btn-outline-danger" href="https://github.com/Haaansy/ReactionTimeBot" id="button_style">DOWNLOAD</a>
-          </div>
-      -->
     <div class="p-1 container" id="contact"></div>
         <div class="p-2 container-fluid justify-content-center" style="background-color: --gray_dark;">
-            <p class="fs-1 text-center text-danger">GET IN TOUCH</p>
-            <p class="font-monospace text-center text-white">Reach me through these provided details.</p>
+            <h1 class="fs-1 text-center text-danger">GET IN TOUCH</h1>
             <div class="mt-5 row">
                 <div class="col text-center">
-                    <p class="fs-1 text-center text-white">SOCIAL MEDIAS</p>
-                    <a type="button" class="btn btn-outline-danger" href="https://www.facebook.com/Haansilog" id="button_style">
-                        <i class="fab fa-facebook-square"></i>
-                        <span class="p-2"> Hansilog </span>
+                    <h2 class="text-center text-white">SOCIALS</h2>
+                    <a type="button" class="btn btn-outline-danger align-items-start" href="https://www.facebook.com/Haansilog" id="button_style">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                        x="0px" 
+                        y="0px" 
+                        width="25" 
+                        height="25" 
+                        viewBox="0 0 24 24"
+                        fill="white">
+                            <path d="M17,3H7C4.791,3,3,4.791,3,7v10c0,2.209,1.791,4,4,4h5.621v-6.961h-2.343v-2.725h2.343V9.309 c0-2.324,1.421-3.591,3.495-3.591c0.699-0.002,1.397,0.034,2.092,0.105v2.43h-1.428c-1.13,0-1.35,0.534-1.35,1.322v1.735h2.7 l-0.351,2.725h-2.365V21H17c2.209,0,4-1.791,4-4V7C21,4.791,19.209,3,17,3z"></path>
+                        </svg>
+                        <span class="ml-1"> @Hansilog </span>
                     </a>
-                    <a type="button" class="btn btn-outline-danger" href="https://www.instagram.com/hns_bndc_/" id="button_style">
-                        <i class="fab fa-instagram"></i>
-                        <span class="p-2"> hns_bndc_ </span>
+                    <a type="button" class="btn btn-outline-danger align-items-start" href="https://www.instagram.com/hns_bndc_/" id="button_style">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                        x="0px" 
+                        y="0px" 
+                        width="25" 
+                        height="25" 
+                        viewBox="0 0 50 50"
+                        fill="white">
+                            <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
+                        </svg>
+                        <span class="ml-1"> @hns_bndc_ </span>
                     </a>
-                    <a type="button" class="btn btn-outline-danger" href="https://twitter.com/Haaansilog" id="button_style">
-                        <i class="fab fa-twitter-square"></i>
-                        <span class="p-2"> Haaansy </span>
+                    <a type="button" class="btn btn-outline-danger align-items-start" href="https://twitter.com/Haaansilog" id="button_style">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                        x="0px" 
+                        y="0px" 
+                        width="25" 
+                        height="25" 
+                        viewBox="0 0 50 50"
+                        fill="white">
+                            <path d="M 11 4 C 7.1456661 4 4 7.1456661 4 11 L 4 39 C 4 42.854334 7.1456661 46 11 46 L 39 46 C 42.854334 46 46 42.854334 46 39 L 46 11 C 46 7.1456661 42.854334 4 39 4 L 11 4 z M 11 6 L 39 6 C 41.773666 6 44 8.2263339 44 11 L 44 39 C 44 41.773666 41.773666 44 39 44 L 11 44 C 8.2263339 44 6 41.773666 6 39 L 6 11 C 6 8.2263339 8.2263339 6 11 6 z M 13.085938 13 L 22.308594 26.103516 L 13 37 L 15.5 37 L 23.4375 27.707031 L 29.976562 37 L 37.914062 37 L 27.789062 22.613281 L 36 13 L 33.5 13 L 26.660156 21.009766 L 21.023438 13 L 13.085938 13 z M 16.914062 15 L 19.978516 15 L 34.085938 35 L 31.021484 35 L 16.914062 15 z"></path>
+                        </svg>
+                        <span class="ml-1"> @Haaansy </span>
                     </a>
-                    <!-- ADDING A SOCIALS 
-                    <a type="button" class="btn btn-outline-primary" id="learn_btn" href="https://www.facebook.com/Haansilog">
-                        <img src="Images/youtube_ico.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
-                        <span class="p-2"> Hansilog </span>
-                    </a>
-                    -->
                 </div>
             <div class="col text-center">
-                <p class="fs-1 text-center text-white">CONTACT <span style="font-size: 10px;"> (click to copy text) </span></p>
-                <p type="button" onclick="copyText('hansianbondoc@gmail.com')" class="btn btn-outline-danger" id="button_style">
-                    <i class="fas fa-envelope-square"></i>
+                <h2 class="text-center text-white">CONTACT</h2>
+                <p type="button" class="btn btn-outline-danger disabled" id="button_style">
                     <span class="p-2" id="textholder">hansianbondoc@gmail.com</span>
                 </p>
-                <!-- ADDING CONTACT INFO
-                <p type="button" onclick="copyText('text here')" class="btn btn-outline-danger" id="button_style">
-                    <img src="Images/h.png" class="rounded float-center img-fluid" style="filter: invert(1); height: 25px;">
-                    <span class="p-2" id="textholder">+63 9052392970</span>
-                </p>    
-                -->
             </div>
           </div>
       </div>
     </div>
-
-      <p class="text-white text-left" style="font-size: 10px;">Made by Haaansy 2022®</p>
-
-    
-    <script src="scripts/hansy.js"></script>
-    <script src="scripts/language.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <p class="text-white text-left ml-5" style="font-size: 10px;">Made by Hans Ian Bondoc 2023 Final Project®</p>
 </body>
 </html>

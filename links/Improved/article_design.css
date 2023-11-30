@@ -1,0 +1,107 @@
+:root {
+    --dark: #2C3333;
+    --medium: #395B64;
+    --light: #A5C9CA;
+    --superlight: #E7F6F2;
+
+    --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: url(./images/background.svg) no-repeat;
+    background-color: var(--dark);
+    background-size: cover;
+    font-family: var(--font);
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    height: 60px;
+}
+
+.left-nav {
+    float: left;
+    display: flex;
+    width: 50%;
+    padding: 10px;
+}
+
+.title-page {
+    margin: 0px;
+    margin-right: 40px;
+    margin-left: 15px;
+    font-size: 36px;
+    color: var(--superlight);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.link {
+    padding: 15px;
+    text-decoration: none;
+    color: var(--superlight);
+    font-weight: 700;
+    margin-right: 40px;
+}
+
+.right-nav {
+    margin-top: 20px;
+    text-align: end;
+    width: 50%;
+    margin-right: 15px;
+}
+.signin-button {
+    background-color: var(--dark);
+    float: right;
+    padding: 10px;
+    display: flex;
+    width: 110px;
+}
+.signin-button img{
+    height: 30px;
+    filter: invert(1);
+}
+
+.signin-button a {
+    margin-left: 6px;
+    text-decoration: none;
+    color: var(--superlight);
+    padding: 5px;
+    font-weight: 600;
+}
+.flex {
+    display: flex;
+}
+.container {
+    width: 80%;
+    margin: 25px;
+    color: var(--superlight);
+    padding-left: 50px;
+}
+
+.sub-container {
+    margin-top: -10px;
+    display: flex;
+    height: 600px;
+}
+
+.left-container {
+    width: 80%;
+    background-color: var(--medium);
+    box-shadow: 10px 10px var(--light);
+    margin-right: 20px;
+}
+
+.right-container {
+    width: 30%;
+    background-color: var(--medium);
+    box-shadow: 10px 10px var(--light);
+}
+
+.ads-container {
+    width: 25%;
+    background-color: var(--light);
+    margin: 15px;
+    margin-top: 50px;
+}
